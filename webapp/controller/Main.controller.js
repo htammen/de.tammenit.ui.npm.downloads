@@ -152,7 +152,17 @@ sap.ui.define([
 				sum += obj.downloads;
 			});
 			
-			that.getView().getModel("viewModel").setProperty("/panelHeaderText", "Date Range, Sum of downloads: " + sum );
+			var from = this.getView().getModel().getProperty("/from");	
+			var to = this.getView().getModel().getProperty("/to");
+			var df = DateFormat.getDateInstance();
+			from = df.format(from);
+			to = df.format(to);
+
+			var dateRange = "last month";
+			if(from !== "") {
+				dateRange = from + " - " + to;
+			}
+			that.getView().getModel("viewModel").setProperty("/panelHeaderText", "Date Range: " + dateRange + ", Sum of downloads: " + sum );
 
 			/*
 			d3.select("#container").selectAll("#sum").remove();

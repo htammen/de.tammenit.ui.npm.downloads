@@ -6,7 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true
+    "buildRequired": false,
+    "lastBuildDateTime": "Wed, 26 Oct 2016 20:59:07 GMT"
   },
   "generation": [
     {
@@ -33,5 +34,10 @@
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "p001984trial",
+    "name": "detammenituinpmdownloads",
+    "lastVersionWeTriedToDeploy": "1.0.1"
   }
 }

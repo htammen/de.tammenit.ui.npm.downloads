@@ -1,0 +1,24 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" controllerName="de.tammenit.ui.npm.downloads.controller.Main">
+	<App>
+		<pages>
+			<Page id="page" title="{i18n>title}">
+				<content>
+					<Panel expandable="true" expanded="{viewModel>/panelExpanded}" headerText="{viewModel>/panelHeaderText}" width="auto" class="sapUiNoMargin">
+						<content>
+							<HBox id="__layout0" alignItems="Center" class="sapUiNoMargin sapUiNoContentPadding">
+								<items>
+									<Label text="from" width="auto" id="__label3" class="sapUiResponsiveMargin"/>
+									<DatePicker width="auto" secondaryCalendarType="Gregorian" id="dateFrom" class="sapUiResponsiveMargin" value="{path: '/from', type: 'sap.ui.model.type.Date'}"/>
+									<Label text="to" width="auto" id="__label4" class="sapUiResponsiveMargin"/>
+									<DatePicker width="auto" secondaryCalendarType="Gregorian" id="dateTo" class="sapUiResponsiveMargin" value="{path: '/to', type: 'sap.ui.model.type.Date'}"/>
+									<Button text="Refresh Data" press="onRefreshData" width="auto" id="buttonRefresh" class="sapUiResponsiveMargin"/>
+								</items>
+							</HBox>
+						</content>
+					</Panel>
+					<core:HTML id="htmlCtrl"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

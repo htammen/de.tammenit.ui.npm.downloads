@@ -152,7 +152,7 @@ sap.ui.define([
 				sum += obj.downloads;
 			});
 			
-			that.getView().getModel("viewModel").setProperty("/panelHeaderText", "Date Ragne, Sum of downloads: " + sum );
+			that.getView().getModel("viewModel").setProperty("/panelHeaderText", "Date Range, Sum of downloads: " + sum );
 
 			/*
 			d3.select("#container").selectAll("#sum").remove();
